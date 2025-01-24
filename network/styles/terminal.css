@@ -1,0 +1,39 @@
+.terminal-tools {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  max-height: calc(100vh - 200px); /* 使用视窗高度计算，减去其他UI元素的高度 */
+  min-height: 200px; /* 设置最小高度 */
+  overflow-y: auto;
+  overflow-x: hidden; /* 防止水平滚动 */
+  flex: 1;
+  scrollbar-width: thin;
+  scrollbar-color: #666 #333;
+  background-color: #1e1e1e; /* 确保背景色一致 */
+}
+
+.terminal-tools > * {
+  width: 100%; /* 确保子元素填充容器宽度 */
+  margin-bottom: 10px; /* 子元素之间的间距 */
+}
+
+.terminal-tools::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal-tools::-webkit-scrollbar-track {
+  background: #333;
+}
+
+.terminal-tools::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 4px;
+}
+
+/* 确保父容器允许滚动 */
+.terminal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden; /* 防止双滚动条 */
+} 
